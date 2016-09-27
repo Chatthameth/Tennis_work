@@ -1,19 +1,23 @@
 {
-  
-"name": "Tennis",
-  
-"version": "1.0.0",
-  
-"description": "",
+  "name": "tennis",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  
-"scripts": {
-    
-"test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "jasmine": "^2.5.2"
   },
-  
-"author": "",
-  
-"license": "ISC"
-
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chatthameth/Tennis_work.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chatthameth/Tennis_work/issues"
+  },
+  "homepage": "https://github.com/Chatthameth/Tennis_work#readme"
 }
