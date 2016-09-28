@@ -38,7 +38,7 @@ describe('Tennis game',function(){
     tennis.playerAGetScore();
     expect(tennis.echo()).toEqual('Thirty - Love');
   });
-  it('shout echo "Fourty - Love" when teamA = 40 teamB = 0 on the game',function(){
+  it('shout echo "Forty - Love" when teamA = 40 teamB = 0 on the game',function(){
     tennis.playerAGetScore();
     expect(tennis.echo()).toEqual('Forty - Love');
   });
@@ -50,9 +50,9 @@ describe('Tennis game',function(){
     tennis.playerBGetScore();
     expect(tennis.echo()).toEqual('Love - Thirty');
   });
-  it('shout echo "Love - Fourty" when teamA = 0 teamB = 40 on the game',function(){
+  it('shout echo "Love - Forty" when teamA = 0 teamB = 40 on the game',function(){
     tennis.playerBGetScore();
-    expect(tennis.echo()).toEqual('Love - Fourty');
+    expect(tennis.echo()).toEqual('Love - Forty');
   });
 
 });
