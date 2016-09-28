@@ -30,13 +30,17 @@ describe('Tennis game',function(){
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
   });
-  it('shout echo "fifteen - Love" when teamA = 15 teamB = 0 on the game',function(){
+  it('shout echo "Fifteen - Love" when teamA = 15 teamB = 0 on the game',function(){
     tennis.playerAGetScore()
     expect(tennis.echo()).toEqual('Fifteen - Love');
   });
   it('shout echo "Thirty - Love" when teamA = 30 teamB = 0 on the game',function(){
     tennis.playerAGetScore()
     expect(tennis.echo()).toEqual('Thirty - Love');
+  });
+  it('shout echo "Fourty - Love" when teamA = 40 teamB = 0 on the game',function(){
+    tennis.playerAGetScore()
+    expect(tennis.echo()).toEqual('Fourty - Love');
   });
   
 });
