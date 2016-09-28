@@ -1,13 +1,21 @@
 function Tennis(){
   var scoreA;
   var scoreB;
-this.start =function(){
-  scoreA = 0;
-  scoreB = 0;
-};
-this.echo = function(){
-return 'Love - Love';
-}
+  this.start =function(){
+    scoreA = 0;
+    scoreB = 0;
+  }
+  this.getScoreA = function(){
+    if(scoreA === 0 || scoreA === 15) scoreA += 15;
+    else if(scoreA === 30) scoreA += 10;
+  }
+  this.getScoreB = function(){
+    if(scoreB === 0 || scoreB === 15) scoreB += 15;
+    else if(scoreB === 30) scoreB += 10;
+  }
+  this.echo = function(){
+    return 'Love - Love';
+  }
 }
 
 describe('Tennis game',function(){
