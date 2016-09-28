@@ -20,9 +20,9 @@ function Tennis(){
 }
 
 describe('Tennis game',function(){
-it('shout echo "Love - Love" when strarting the game',function(){
-var tennis = new Tennis();
-tennis.start();
-expect(tennis.echo()).toEqual('Love-Love');
-});
+  var tennis = new Tennis();
+  it('shout echo "Love - Love" when strarting the game',function(){
+    tennis.start();
+    expect(tennis.echo()).toEqual('Love-Love');
+  });
 });
