@@ -14,9 +14,10 @@ function Tennis(){
     else if(scoreB === 30) scoreB += 10;
   }
   this.echo = function(){
-    if(scoreA === 0 && scoreB === 0) return 'Love - Love';
-    else if(scoreA === 15 && scoreB === 0 ) return 'Fifteen - Love';
-  }
+    if(scoreA === 0 && scoreB === 0) {return 'Love - Love';}
+        else if(scoreA === 15 && scoreB === 0 ) return 'Fifteen - Love';
+        else if(scoreA === 30 && scoreB === 0 ) return 'Thirty - Love';
+        
 }
 
 describe('Tennis game',function(){
@@ -28,5 +29,6 @@ describe('Tennis game',function(){
   it('shout echo "fifteen - Love" when teamA = 15 teamB = 0 on the game',function(){
     tennis.playerAGetScore()
     expect(tennis.echo()).toEqual('Fifteen-Love');
+    
   });
 });
