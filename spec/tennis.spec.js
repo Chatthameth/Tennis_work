@@ -5,17 +5,17 @@ function Tennis(){
     scoreA = 0;
     scoreB = 0;
   }
-  this.getScoreA = function(){
+  this.playerAGetScore = function(){
     if(scoreA === 0 || scoreA === 15) scoreA += 15;
     else if(scoreA === 30) scoreA += 10;
   }
-  this.getScoreB = function(){
+  this.playerBGetScore = function(){
     if(scoreB === 0 || scoreB === 15) scoreB += 15;
     else if(scoreB === 30) scoreB += 10;
   }
   this.echo = function(){
-    if(this.sumA === 0 && this.sumB === 0) {return 'Love - Love';}
-        else if(this.sumA === 15 && this.sumB === 0 ) {return 'fifteen - Love';}
+    if(scoreA === 0 && scoreB === 0) return 'Love - Love';
+    else if(scoreA === 15 && scoreB === 0 ) return 'fifteen - Love';
   }
 }
 
