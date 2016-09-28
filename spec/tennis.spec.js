@@ -50,5 +50,9 @@ describe('Tennis game',function(){
     tennis.playerBGetScore();
     expect(tennis.echo()).toEqual('Love - Thirty');
   });
+  it('shout echo "Love - Fourty" when teamA = 0 teamB = 40 on the game',function(){
+    tennis.playerBGetScore();
+    expect(tennis.echo()).toEqual('Love - Fourty');
+  });
 
 });
