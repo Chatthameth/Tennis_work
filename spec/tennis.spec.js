@@ -14,7 +14,8 @@ function Tennis(){
     else if(scoreB === 30) scoreB += 10;
   }
   this.echo = function(){
-    return 'Love - Love';
+    if(this.sumA === 0 && this.sumB === 0) {return 'Love - Love';}
+        else if(this.sumA === 15 && this.sumB === 0 ) {return 'fifteen - Love';}
   }
 }
 
