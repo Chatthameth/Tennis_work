@@ -17,7 +17,7 @@ function Tennis(){
     if(scoreA === 0 && scoreB === 0) return 'Love - Love';
     else if(scoreA === 15 && scoreB === 0 ) return 'Fifteen - Love';
     else if(scoreA === 30 && scoreB === 0 ) return 'Thirty - Love';
-    else if(scoreA === 40 && scoreB === 0 ) return 'Fourty - Love';
+    else if(scoreA === 40 && scoreB === 0 ) return 'Forty - Love';
     else if(scoreA === 0 && scoreB === 15 ) return 'Love - Fifteen';
     else if(scoreA === 0 && scoreB === 30 ) return 'Love - Thirty';
     else if(scoreA === 0 && scoreB === 40 ) return 'Love - Forty';
@@ -40,7 +40,7 @@ describe('Tennis game',function(){
   });
   it('shout echo "Fourty - Love" when teamA = 40 teamB = 0 on the game',function(){
     tennis.playerAGetScore();
-    expect(tennis.echo()).toEqual('Fourty - Love');
+    expect(tennis.echo()).toEqual('Forty - Love');
   });
   it('shout echo "Love - Fifteen" when teamA = 0 teamB = 15 on the game',function(){
     tennis.playerBGetScore();
