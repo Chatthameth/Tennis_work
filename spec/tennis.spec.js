@@ -14,26 +14,22 @@ function Tennis(){
     else if(scoreB === 30 ||scoreB === 40  ) scoreB += 10;
   }
   this.echo = function(){
-    if (scoreA === 0 && scoreB === 0) return 'Love - Love';
-    else if (scoreA === 0 && scoreB === 15) return 'Love - Fifteen';
-    else if (scoreA === 0 && scoreB === 30) return 'Love - Thirty';
-    else if (scoreA === 0 && scoreB === 40) return 'Love - Forty';
-    else if (scoreA === 0 && scoreB === 50) return 'player B won';
+    if (scoreA === 0 && scoreB === 0) return 'Love - Love'; // 0 - 0
 
-    else if (scoreA === 15 && scoreB === 0) return 'Fifteen - Love';
-    else if (scoreA === 30 && scoreB === 0) return 'Thirty - Love';
-    else if (scoreA === 40 && scoreB === 0) return 'Forty - Love';
-    else if (scoreA === 50 && scoreB === 0) return 'player A won';
+    else if (scoreA === 15 && scoreB === 0) return 'Fifteen - Love'; // 15 - 0
+    else if (scoreA === 30 && scoreB === 0) return 'Thirty - Love'; // 30 - 0
+    else if (scoreA === 40 && scoreB === 0) return 'Forty - Love'; // 40 - 0
+    else if (scoreA === 50 && scoreB === 0) return 'player A won'; // A win
 
-    else if (scoreA === 15 && scoreB === 15) return 'Fifteen - Fifteen';
-    else if (scoreA === 15 && scoreB === 30) return 'Fifteen - Thirty';
-    else if (scoreA === 15 && scoreB === 40) return 'Fifteen - Forty';
-    else if (scoreA === 30 && scoreB === 15) return 'Thirty - Fifteen';
-    else if (scoreA === 30 && scoreB === 30) return 'Thirty - Thirty';
-    else if (scoreA === 30 && scoreB === 40) return 'Thirty - Forty';
-    else if (scoreA === 40 && scoreB === 15) return 'Forty - Fifteen';
-    else if (scoreA === 40 && scoreB === 30) return 'Forty - Thirty';
-    else if (scoreA === 40 && scoreB === 40) return 'Forty - Forty';
+    else if (scoreA === 0 && scoreB === 15) return 'Love - Fifteen'; // 0 - 15
+    else if (scoreA === 0 && scoreB === 30) return 'Love - Thirty'; // 0 - 30
+    else if (scoreA === 0 && scoreB === 40) return 'Love - Forty'; // 0 - 40
+    else if (scoreA === 0 && scoreB === 50) return 'player B won'; // B win
+
+    else if (scoreA === 15 && scoreB === 15) return 'Fifteen - Fifteen'; // 15 - 15
+    else if (scoreA === 30 && scoreB === 15) return 'Thirty - Fifteen'; // 30 - 15
+
+
   }
 }
 
@@ -87,6 +83,9 @@ describe("Tennis",function(){
   })
   it('should echo "Fifteen - Fifteen" when start game',function(){
     tennis.playerAGetScore();
+    expect(tennis.echo()).toEqual('Fifteen - Love');
+  })
+  it('should echo "Fifteen - Fifteen" when start game',function(){
     tennis.playerBGetScore();
     expect(tennis.echo()).toEqual('Fifteen - Fifteen');
   })
@@ -94,7 +93,5 @@ describe("Tennis",function(){
     tennis.playerAGetScore();
     expect(tennis.echo()).toEqual('Thirty - Fifteen');
   })
-
-
-
+  
 });
